@@ -1,7 +1,9 @@
 package com.rktuhin.htmlview_demo
 
+import android.health.connect.datatypes.units.Length
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.HtmlCompat
@@ -25,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         val tvIngredients = findViewById<TextView>(R.id.tvIngredients)
 
         setHtmlText(tvIngredients, htmlText)
+
+        tvIngredients.setOnClickListener {
+            Toast.makeText(this@MainActivity, "Pew Pew!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
 
