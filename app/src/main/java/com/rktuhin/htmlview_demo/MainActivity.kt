@@ -54,11 +54,11 @@ fun displayRichText(textView: TextView, htmlString: String) {
     val spanned = HtmlCompat.fromHtml(htmlString, HtmlCompat.FROM_HTML_MODE_LEGACY)
     val spannable = SpannableStringBuilder(spanned)
 
-    // 2. Extract the number from "font-size: 10px" using Regex
+    // 2. Extract the number from "font-size: 12px" using Regex
     val pattern = Regex("font-size:\\s*(\\d+)px")
     val match = pattern.find(htmlString)
 
-    // If we find a number (like 10), we apply it to the whole text
+    // If we find a number (like 12), we apply it to the whole text
     val fontSize = match?.groupValues?.get(1)?.toInt() ?: 14 // Default to 14 if not found
 
     spannable.setSpan(
