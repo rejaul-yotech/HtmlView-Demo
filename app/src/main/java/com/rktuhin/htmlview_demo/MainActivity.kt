@@ -49,7 +49,7 @@ fun setHtmlText(textView: TextView, htmlString: String) {
     textView.text = spannedText
 }
 
-private fun displayRichText(textView: TextView, htmlString: String) {
+fun displayRichText(textView: TextView, htmlString: String) {
     // 1. Convert tags like <strong> and <p> first
     val spanned = HtmlCompat.fromHtml(htmlString, HtmlCompat.FROM_HTML_MODE_LEGACY)
     val spannable = SpannableStringBuilder(spanned)
